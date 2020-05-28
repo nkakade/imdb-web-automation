@@ -8,9 +8,7 @@
     <url>https://www.sleepio.com</url>
 
     <properties>
-        <java.source>1.8</java.source>
-        <java.target>1.8</java.target>
-        <selenium.version>2.52.0</selenium.version>
+        <selenium.version>3.141.59</selenium.version>
         <testng.version>6.8.7</testng.version>
     </properties>
 
@@ -24,12 +22,6 @@
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-chrome-driver</artifactId>
-            <version>${selenium.version}</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-ie-driver</artifactId>
             <version>${selenium.version}</version>
             <scope>compile</scope>
         </dependency>
@@ -68,24 +60,6 @@
         <testSourceDirectory>src/test</testSourceDirectory>
         <outputDirectory>target/classes</outputDirectory>
         <testOutputDirectory>target/test-classes</testOutputDirectory>
-
-        <resources>
-            <resource>
-                <directory>test.src/main/resources</directory>
-                <excludes>
-                    <exclude>**/*.java</exclude>
-                </excludes>
-            </resource>
-        </resources>
-
-        <testResources>
-            <testResource>
-                <directory>test.src/test/resources</directory>
-            </testResource>
-        </testResources>
-
-        <directory>target</directory>
-        <finalName>webautomation-1.4-SNAPSHOT</finalName>
 
         <pluginManagement>
             <plugins>
@@ -311,8 +285,4 @@
             </plugin>
         </plugins>
     </build>
-
-    <reporting>
-        <outputDirectory>target/site</outputDirectory>
-    </reporting>
 </project>

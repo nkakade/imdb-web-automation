@@ -1,18 +1,17 @@
 package framework.base;
 
 import framework.driver.WebDriverUtil;
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
 
 import java.security.InvalidParameterException;
 
 public class BasePage {
 
+    protected WebDriverUtil webDriverUtil = null;
     protected String host = null;
     protected String url = null;
-    protected WebDriverUtil webDriverUtil = null;
+
 
     /**
      * Default constructor for base page

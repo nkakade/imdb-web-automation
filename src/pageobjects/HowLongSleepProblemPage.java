@@ -14,13 +14,13 @@ public class HowLongSleepProblemPage extends BasePage {
 
 
     public void selectDropdownOptionByValue(String value) {
-        WebElement testDropDown = getWebDriverUtil().getWebDriver().findElement(By.className("sl-select"));
+        WebElement testDropDown = getWebDriverUtil().findElement(By.className("sl-select"));
         Select dropdown = new Select(testDropDown);
         dropdown.selectByValue(value);
     }
 
     public String getSelectedOptionText() {
-        WebElement testDropDown = getWebDriverUtil().getWebDriver().findElement(By.className("sl-select"));
+        WebElement testDropDown = getWebDriverUtil().findElement(By.className("sl-select"));
         Select dropdown = new Select(testDropDown);
         WebElement element = dropdown.getFirstSelectedOption();
         if(element != null) {

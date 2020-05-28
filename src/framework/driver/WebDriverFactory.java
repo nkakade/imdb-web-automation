@@ -3,7 +3,7 @@ package framework.driver;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 public class WebDriverFactory {
 
@@ -26,11 +26,10 @@ public class WebDriverFactory {
     }
 
     public static WebDriver createChrome() {
-        DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setPlatform(Platform.MAC);
-        capabilities.setBrowserName("chrome");
+        ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.setCapability("platform", Platform.MAC);
         System.setProperty("webdriver.chrome.driver", "src/resources/chromedriver");
-        return new ChromeDriver(capabilities);
+        return new ChromeDriver(chromeOptions);
     }
 
 }

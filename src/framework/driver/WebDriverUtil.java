@@ -66,8 +66,7 @@ public class WebDriverUtil {
 
     public void setImplicitTimeout(long timeInSec) {
 
-        getWebDriver().manage().timeouts()
-                .implicitlyWait(timeInSec, TimeUnit.SECONDS);
+        getWebDriver().manage().timeouts().implicitlyWait(timeInSec, TimeUnit.SECONDS);
     }
 
     public void resetImplicitTimeout() {

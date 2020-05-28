@@ -2,10 +2,10 @@ package framework.base;
 
 import framework.driver.WebDriverUtil;
 
-public abstract class BaseTest {
+public class BaseTest {
 
-    private String host;
     private WebDriverUtil webDriverUtil;
+    private String host;
 
     public BaseTest() {
         try {
@@ -17,6 +17,8 @@ public abstract class BaseTest {
             e.printStackTrace();
         }
     }
+
+
 
     public void setHost(String host) {
 
@@ -37,7 +39,4 @@ public abstract class BaseTest {
         return webDriverUtil;
     }
 
-
-
 }
-

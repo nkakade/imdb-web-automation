@@ -20,6 +20,8 @@ public class IMDBTopMoviesPage extends BasePage {
 
         for(int i = 0; i < numberOfMoviesToAdd; i++) {
             WebElement element = listOfRibbons.get(i);
+            //sleep one second before adding next item
+            getWebDriverUtil().sleep(1000);
             element.click();
         }
 
@@ -33,6 +35,8 @@ public class IMDBTopMoviesPage extends BasePage {
         for(int i = 0; i < numberOfMoviesToRemove; i++) {
             WebElement element = listOfRibbons.get(i);
             element.click();
+            //sleep one second before removing next item
+            getWebDriverUtil().sleep(1000);
         }
 
     }

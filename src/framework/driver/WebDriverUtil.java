@@ -12,10 +12,10 @@ public class WebDriverUtil {
 
     private WebDriver webDriver;
 
-    private static final long DEFAULT_PAGE_TIMEOUT = 30;
-    private static final long DEFAULT_IMPLICIT_TIMEOUT = 20;
-    private static final long DEFAULT_SCRIPT_TIMEOUT = 20;
-    private static final int WAIT_FOR_ELEMENT_TIMEOUT = 20;
+    private static final long DEFAULT_PAGE_TIMEOUT = 10;
+    private static final long DEFAULT_IMPLICIT_TIMEOUT = 10;
+    private static final long DEFAULT_SCRIPT_TIMEOUT = 10;
+    private static final int WAIT_FOR_ELEMENT_TIMEOUT = 10;
     private static final long DEFAULT_AJAX_TIMEOUT = 10;
     private int pageLoadTimeout = 60;
     private static Method currentTestMethod;

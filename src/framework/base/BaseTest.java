@@ -11,14 +11,12 @@ public class BaseTest {
         try {
             WebDriverUtil wd = WebDriverUtil.getWebDriverUtilWithDefaultDriverSettings("chrome");
             this.setWebDriverUtil(wd);
-            this.setHost("https://onboarding.sleepio.com/sleepio/big-health");
+            this.setHost("https://www.imdb.com");
         }
         catch (Exception e) {
             e.printStackTrace();
         }
     }
-
-
 
     public void setHost(String host) {
 

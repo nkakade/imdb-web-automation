@@ -12,7 +12,6 @@ public class BasePage {
     protected String host = null;
     protected String url = null;
 
-
     /**
      * Default constructor for base page
      *
@@ -40,32 +39,23 @@ public class BasePage {
         getWebDriverUtil().get(getHost() + getUrl());
     }
 
+    public void enterTextInField(String selector, String value) {
 
-    public String getGeneralErrorMessage() {
-        WebElement webElement = getWebDriverUtil().findElementByCssSelector(".sl-general-error");
-        if(webElement != null) {
-            return webElement.getText();
-        }
+        WebElement webElement = getWebDriverUtil().findElementByCssSelector(selector);
 
-        return "";
+        //If I had a logger in this project, I would use it to log messages this these
+        System.out.println("Trying to enter " + value + " in field with selector: " + selector);
+
+        webElement.sendKeys(value);
     }
 
-    public String getRadioOptionsErrorMessage() {
-        WebElement webElement = getWebDriverUtil().findElementByCssSelector(".sl-container-radio-options--error");
-        if(webElement != null) {
-            return webElement.getText();
-        }
+    public void clickOnElement(String selector) {
 
-        return "";
-    }
+        WebElement webElement = getWebDriverUtil().findElementByCssSelector(selector);
 
-    public void clickOnContinueButton() {
-        //continue button is disabled when the question loads.
-        // disabling the disabled attribute so we can simulate user behavior of clicking it without selecting any option
-        JavascriptExecutor jse = (JavascriptExecutor) getWebDriverUtil().getWebDriver();
-        jse.executeScript("document.getElementsByClassName('sl-button--wide')[0].disabled=false");
+        //If I had a logger in this project, I would use it to log messages this these
+        System.out.println("Clicking element with selector: " + selector);
 
-        WebElement webElement = getWebDriverUtil().findElementByCssSelector(".sl-button-wrapper .sl-button");
         webElement.click();
     }
 
